@@ -287,17 +287,79 @@ function getTitlesLower10(productList) {
   return titles;
 }
 
-
 // Trả về chi tiết (tên, giá, mô tả) của sản phẩm có id là 5.
+function getProductById(productList, id) {
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].id === id) {
+      return productList[i];
+    }
+  }
+}
 
 // Trả về mảng products mà số lượng tồn kho của tất cả sản phẩm "jewelry" tăng thêm 5 đơn vị.
+function increaseInventoryCount(productList, by) {
+  for (let i = 0; i < productList.length; i++) {
+    productList[i].inventoryCount += by;
+  }
+
+  return productList;
+}
 
 // Trả về một mảng chỉ chứa các sản phẩm có giá dưới 30 đô la.
+function getProductsLowerPrice(productList, maxPrice) {
+  const results = [];
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].price < maxPrice) {
+      results.push(productList[i]);
+    }
+  }
+
+  return results;
+}
 
 // Trả về một mảng chứa các sản phẩm hiện còn hàng
+function getProductsInStock(productList) {
+  const inStockProducts = [];
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].inventoryCount > 0) {
+      inStockProducts.push(productList[i]);
+    }
+  }
+
+  return inStockProducts;
+}
 
 // Trả về mảng products mà số lượng tồn kho của "WD 4TB Gaming Drive" gỉam đi 3 đơn vị.
 
+function descreaseInventoryCount(productList, title, by) {
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].title === title) {
+      productList[i].inventoryCount -= by;
+    }
+  }
+
+  return productList;
+}
+
 // Loại bỏ bất kỳ sản phẩm nào có tồn kho bằng 0 khỏi mảng.
+function getProductsInStock(productList) {
+  const inStockProducts = [];
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].inventoryCount > 0) {
+      inStockProducts.push(productList[i]);
+    }
+  }
+
+  return inStockProducts;
+}
 
 // Trả lại tên của các sản phẩm ở dạng chữ in hoa.
+function getUppercaseProductTitles(productList) {
+  const titles = [];
+
+  for (let i = 0; i < productList.length; i++) {
+    titles.push(productList[i].title.toUpperCase());
+  }
+
+  return titles;
+}
