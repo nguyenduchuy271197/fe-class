@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  padding: 32px;
+}
+
+button {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b91c1c;
+  transform: scale(1.5);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #dc2626;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  padding: 12px 48px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  color: #b91c1c;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: lightblue;
+  background-color: lightcoral;
+  margin-top: 24px;
+  transition: 1s;
+}

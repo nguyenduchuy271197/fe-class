@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(246, 239, 239);
+}
+
+.heading-box {
+  width: 500px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+  margin-bottom: 8px;
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+.text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+}
+
+.btn-primary {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b91c1c;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #dc2626;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  padding: 12px 48px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  color: #b91c1c;
+}
+
+/* Animation */
+/* 1. Define keyframe */
+/* 2. Add animation property into element */
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.heading-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  /* animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.75s;
+  animation-fill-mode: both;
+  animation-timing-function: ease; */
+
+  animation: fadeInUp 1s 0.75s both;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-left-color: transparent;
+
+  animation: spin 0.5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

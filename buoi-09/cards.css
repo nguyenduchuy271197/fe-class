@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding: 32px; */
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.blog {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.blog-img {
+  width: 100%;
+}
+
+.blog-body {
+  padding: 24px;
+}
+
+.blog-time {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.blog-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Breakpoints */
+/* 
+    550px
+    640px
+    768px
+    1024px (*)
+    1280px
+    1536px 
+*/
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 650px) {
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* the device >= 1024px */
+@media (min-width: 1024px) {
+  .blogs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* @media (max-width: 1024px) {
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .blog-time {
+    font-size: 10px;
+  }
+
+  .blog-title {
+    font-size: 16px;
+  }
+
+  .blog-description {
+    font-size: 14px;
+  }
+} */

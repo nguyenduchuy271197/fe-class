@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  padding: 32px;
+}
+
+.popup {
+  padding: 32px;
+  border: 1px solid #dbeafe;
+  width: 512px;
+  border-radius: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.popup-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #60a5fa;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-icon svg {
+  height: 14px;
+  width: 14px;
+  color: #fff;
+}
+
+.popup-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.popup-body {
+  margin-bottom: 24px;
+}
+
+.popup-description {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.popup-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  line-height: 1.5;
+}

@@ -1,0 +1,60 @@
+/* selector {
+  property_1: value1;
+  property_2: value2;
+  property_31: value3;
+} */
+body {
+  height: 5000px;
+}
+
+/* Select all elements have class="box" */
+/* .box {
+  background-color: #123456;
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: #123456
+    url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg")
+    no-repeat center;
+  background: #123456
+    url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg")
+    no-repeat bottom right;
+  background-size: cover;
+
+  background-image: linear-gradient(to bottom right, red, yellow);
+  background-color: #123456;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px;
+  display: none;
+} */
+
+/* .box {
+  color: green;
+  font-size: 50px;
+} */
+
+h1 {
+  background-color: #123456;
+  width: 50%;
+  height: 200px;
+}
+
+strong {
+  background-color: lightblue;
+}
+
+/* li {
+  display: inline-block;
+  width: 100px;
+} */
+
+/* Relative Units: % */
+/* Absolute Units: px */
+
+ul {
+  color: blue;
+}

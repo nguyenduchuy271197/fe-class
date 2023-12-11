@@ -1,0 +1,11 @@
+:root {
+  --primary-color: coral;
+}
+
+p {
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}
