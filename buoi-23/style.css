@@ -1,0 +1,24 @@
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+
+  display: none;
+}
+
+#box.show {
+  display: block;
+}
+
+#square {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+
+  transition: 0.5s;
+}
+
+#square.zoom {
+  width: 400px;
+  height: 400px;
+}
