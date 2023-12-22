@@ -1,0 +1,13 @@
+#parent {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+#child {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: lightcoral;
+}
