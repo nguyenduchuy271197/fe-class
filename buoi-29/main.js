@@ -1,0 +1,3 @@
+// ReactJS
+// - Divide each component
+
