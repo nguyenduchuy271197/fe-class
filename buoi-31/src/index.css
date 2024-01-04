@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.avatar-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-name {
+  font-size: 2rem;
+  color: coral;
+}
