@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 const quotes = [
   {
     quote: "The only way to do great work is to love what you do.",
@@ -89,25 +90,48 @@ const quotes = [
   },
 ];
 
+// 20 -> lastIndex = 19 -> nextIndex = 20 -> quotes[20]
+
 export default function Quote() {
+  // State variable: open
+  // Initial State: false (boolean)
+
+  // State variable: activeIndex
+  // Initial State: 0 (number)
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div className="max-w-screen-sm mx-auto px-8 py-12">
       <div className="border p-8 rounded-xl flex flex-col items-center gap-8">
         <div className="text-center">
-          <p className="text-2xl mb-4">
-            The only way to do great work is to love what you do
-          </p>
-          <p>- Huy Nguyen -</p>
+          <p className="text-2xl mb-4">{quotes[activeIndex].quote}</p>
+          <p>- {quotes[activeIndex].author} -</p>
         </div>
         <div className="flex items-center gap-2">
-          <button className="size-10 rounded text-white bg-blue-500 flex items-center justify-center hover:opacity-90">
-            <ChevronLeft />
-          </button>
-          <button className="size-10 rounded text-white bg-blue-500 flex items-center justify-center hover:opacity-90">
-            <ChevronRight />
-          </button>
+          {activeIndex > 0 && (
+            <button
+              className="size-10 rounded text-white bg-blue-500 flex items-center justify-center hover:opacity-90"
+              onClick={() => setActiveIndex(activeIndex - 1)}
+            >
+              <ChevronLeft />
+            </button>
+          )}
+
+          {activeIndex < quotes.length - 1 && (
+            <button
+              className="size-10 rounded text-white bg-blue-500 flex items-center justify-center hover:opacity-90"
+              onClick={() => setActiveIndex(activeIndex + 1)}
+            >
+              <ChevronRight />
+            </button>
+          )}
         </div>
       </div>
     </div>
   );
 }
+
+// Nhận định dữ liệu thay đổi của component (quote thay đổi)
+// Tạo ra UI version tương ứng với trạng thái đó
+// Nhận định được bien trạng thái cho component
+// Xu ly event
